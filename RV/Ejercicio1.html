@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+    <head>
+      <meta charset="utf-8">
+      <title> Ejercicio 1</title> <!--se declara el título del ejercicio-->
+    </head>
+    <body>
+      <h1>Ejercicio 1</h1>
+      <canvas id="miCanvas1" width="100" heigth"100"><!--se declara el primer canvas llamado miCanvas1 con ancho de 100 y altura de 100-->
+        &iexcl;No funciona!
+      </canvas>
+      
+       <canvas id="miCanvas2" width="200" heigth"200"><!--se declara el segundo canvas llamado miCanvas2 con ancho 200 y altura de 200-->
+        &iexcl;No funciona!
+      </canvas>
+      
+      <canvas id="miCanvas3" width="100" heigth"300"><!--se declara el tercer canvas llamado miCanvas3 con ancho 100 y altura 300-->
+        &iexcl;No funciona!
+      </canvas>
+     
+      <script>
+        var miCanvas1 = document.getElementById("miCanvas1");
+        var contexto = miCanvas1.getContext("2d");
+        contexto.fillStyle="red";
+        contexto.fillRect(10, 10, 50, 50); <!--se le da un tamaño de 50x30 en las coordenadas x=10, y=10-->
+        
+        var miCanvas2 = document.getElementById("miCanvas2");
+        var contexto2 = miCanvas2.getContext("2d");
+        contexto2.fillStyle="green";
+        contexto2.fillRect(50, 50, 75, 100);<!--se le da un tamaño de 10x30 en las coordenadas x=50, y=50-->
+        
+        var miCanvas3 = document.getElementById("miCanvas3");
+        var contexto3 = miCanvas3.getContext("2d");
+        contexto3.fillStyle="blue";
+        contexto3.fillRect(80, 50, 100, 200);<!--se le da un tamaño de 20x250 en las coordenadas x=80, y=50-->
+         
+      </script>
+    </body>
+  </html>
