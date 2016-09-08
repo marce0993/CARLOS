@@ -4,7 +4,7 @@ camara.position.z=7;
 var renderizador=new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderizador.domElement);
-var forma=new THREE.CylinderGeometry(0.5, 0.5, 2);
+var forma=new THREE.CylinderGeometry(1, 0.5, 2);
 var forma2=new THREE.SphereGeometry(1.5,8,6);
 var material=new THREE.MeshBasicMaterial({color: 0x2A1B0A});
 var material2=new THREE.MeshBasicMaterial({color: 0x00ff00});
