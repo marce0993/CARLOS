@@ -1,4 +1,15 @@
-var miCanvas = document.getElementById("miCanvas");
-var contexto = miCanvas.getContext("2d");
-contexto.fillStyle="red";
-contexto.fillRect(30,30,50,50)
+var camara=new THREE.PerspectiveCamera();
+camara.position.z=7;
+var renderizador=new THREE.WebGLRenderer();
+renderizador.setSize(window.innerHeight*.95,window.innerHeight*.95);
+document.body.appendChild(renderizador.domElement);
+var forma=new THREE.CylinderGeometry(0.5, 0.5, 2);
+var forma2=new THREE.SphereGeometry(1.5,8,6);
+var material=new THREE.MeshBasicMaterial({color: 0x2A1B0A});
+var material2=new THREE.MeshBasicMaterial({color: 0x00ff00});
+var cilindro=new THREE.Mesh(forma,material);
+var esfera=new THREE.Mesh(forma2,material2);
+esfera.position.set(0,0.9,0);
+cilindro.position.set(0,-1,0);
+escena.add(cilindro,esfera);
+renderizador.render(escena,camara);
