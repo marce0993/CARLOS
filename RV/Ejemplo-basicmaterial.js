@@ -14,5 +14,4 @@ var renderizador = new THREE.WebGLRender(canvas: lienzo,
 renderizador.setSize(600,600);
 renderizador.render(escena,camara);
 
-<canvas id="basicMaterial" width="600" height="600"></canvas>
-<script scr="ejemplo-basicMaterial.js"></script>
+
