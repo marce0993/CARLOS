@@ -47,24 +47,6 @@ function loop()
 setup();
 loop();
 
-Rodrigo
-----HTML-----
 
-Rodrigo
-<!doctype html>
-<html>
-      <head>
-            <title> Pieza Movimiento</title>
-            <meta http-equiv="Context-Type"
-                            content="text/html; charset=utf-8">
-            <style>
-                body{text-align: center;}
-            </style>
-      </head>
-      
-      <body>
-            <script src="./three.min.js"></script>
-           <canvas id="ejemplo-pieza-mov"  ></canvas>
-           <script src="ejemplo-pieza-mov.js"></script>          
-      </body>
-</html>
+
+
