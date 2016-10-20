@@ -14,7 +14,7 @@ var pieza
 Pieza.prototype=new THREE.Object3D
 funtion.setup(){
 pieza=new Pieza();
-...var camara = new THREE.OrtographicCamera();
+var camara = new THREE.OrtographicCamera();
 
 camara.left = window.innnerWidth / -2;
 camara.right = window.innerWidth / 2;
