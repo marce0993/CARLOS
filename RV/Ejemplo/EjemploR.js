@@ -7,16 +7,16 @@ function Agent(x=0, y=0)
 
 Agent.prototype = new THREE.Object3D();
 
-Agent.prototype.sense= fucntion(environment) {};
-Agent.prototype.plan= fucntion(environment) {};
-Agent.prototype.act= fucntion(environment) {};
+Agent.prototype.sense= function(environment) {};
+Agent.prototype.plan= function(environment) {};
+Agent.prototype.act= function(environment) {};
 
 function Environment()
 {
       THREE.Scene.call(this);
 }
 
-funtion Wall(size, x, y){
+function Wall(size, x, y){
   THREE.Mesh.call(this,
         new THREE.BoxGeometry(size,size, size),
               new THREE.MeshNormalMaterial());
@@ -26,13 +26,13 @@ funtion Wall(size, x, y){
 }
 
 Wall.prototype = new THREE.Mesh();
-  Environment.prototype.setMap = suncion(map){
+  Environment.prototype.setMap = function(map){
   var _offset = Math.floor(map.length/2);
-  for(var i=0; i< map.length, i++)
+  for(var i=0; i< map.length; i++)
     for(var j=0;j<map.length; j++){
-    if(map[i][j]===="x")
+    if(map[i][j]==="x")
       this.add(new wall(1,j-_offset,-(i -_offset)));
-      else if(map[i][j]===="r")
+      else if(map[i][j]==="r")
         this.add(new Robot(0.5,j -_offset, -(i -_offset)));
         }
   }
@@ -78,7 +78,7 @@ Wall.prototype = new THREE.Mesh();
    
    environmet.add( camera);
    }
-   Funtion loop(){
+   function loop(){
     requestAnimationFrame( loop );
       enviroment.sense();
       enviroment.plan();
@@ -93,7 +93,7 @@ Wall.prototype = new THREE.Mesh();
      } 
   Sensor.prototype = new THREE.Raycaster();
   
-  funtion Robot(size,x,y){
+  function Robot(size,x,y){
   Agent.call(this, x, y);
   
   this.sensor = new Sensor();
@@ -102,9 +102,9 @@ Wall.prototype = new THREE.Mesh();
   }
   Robot.prototype = new Agent();
   
-  Robot.prototype.sense= funtion(enviroment){
+  Robot.prototype.sense= function(enviroment){
   this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.totation.z),0));
-  var obstaculo = this.sensor, intersectObjects(enviroment.children, true);
+  var obstaculo = this.sensor.intersectObjects(enviroment.children, true);
   
   if((obstaculo.lenght > 0 && (obstaculo[0].distance <= .5)))
     this.sensor.colision = true;
@@ -134,7 +134,7 @@ Wall.prototype = new THREE.Mesh();
    
    Robot.prototype.operations ={};
    
-   Robot.prototype.operations.goStraight = funtion(robot, distance){
+   Robot.prototype.operations.goStraight = function(robot, distance){
       if (distance===undefined)
       distance=.05;
       robot.position.x += distance*Math.cos(robot.rotation.z);
@@ -149,8 +149,5 @@ Wall.prototype = new THREE.Mesh();
       angle=Math.PI/2;
       robot.rotation.z +=angle;
    };
-  }
    setup();
    loop();  
-   
- 
