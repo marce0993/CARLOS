@@ -1,4 +1,4 @@
-function Agent(x=0, y=0)
+function Agent(x=0,y=0)
 {
       THREE.Object3D.call(this);
       this.postion.x =x;
@@ -16,7 +16,7 @@ function Environment()
       THREE.Scene.call(this);
 }
 
-function Wall(size, x, y){
+function Wall(size,x,y){
   THREE.Mesh.call(this,
         new THREE.BoxGeometry(size,size, size),
               new THREE.MeshNormalMaterial());
