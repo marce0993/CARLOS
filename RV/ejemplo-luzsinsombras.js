@@ -19,7 +19,7 @@ var camara= new THREE.PerspectiveCamera();
 camara.position.z=15;
 camara.position.y =5;
 
-var lienzo = document.getElementById("ejemplo-luzsinsombras");
+var lienzo = document.getElementById("LambertMaterial");
 var renderizador = new THREE.WebGLRenderer({canvas:lienzo,
                                             antialias:true});
 
